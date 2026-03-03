@@ -12,10 +12,10 @@ contract MintBasicNft is Script{
 
     function run () external {
         address DeployedAddress = DevOpsTools.get_most_recent_deployment("BasicNft", block.chainid);
-        mintBftOncontract(DeployedAddress);
+        mintNftOnContract(DeployedAddress);
     }
 
-    function mnitNftOnContract(address memory basicNftAddress) public {
+    function mintNftOnContract(address memory basicNftAddress) public {
         vm.startBroadcast();
         BasicNft(basicNftAddress).mintNft(PUG_URI);
         vm.stopBroadcast();

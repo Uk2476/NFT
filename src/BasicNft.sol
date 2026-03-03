@@ -6,3 +6,4 @@ import {ERC721} from "../lib/openzeppelin-contracts/contracts/token/ERC721/ERC72
 contract BasicNft is ERC721{
     contr
 }
+
